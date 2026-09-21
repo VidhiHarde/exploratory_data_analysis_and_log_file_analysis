@@ -1,0 +1,11 @@
+table_name,purpose,backup,flag,description
+D001001,Master data for branch locations and operational settings,Daily,Active,Stores branch parameters and operational master details.
+D002007,Audit logging for user session logins and activity tracking,Daily,Active,Stores user login activities with timestamps and current activity details.
+D035066,Transaction processing for ATM network operations,Real-time,Active,Stores transaction records with authorization numbers and batch details.
+D010004,Core banking account profiles and ownership mapping,Daily,Active,Stores account master profiles and customer ownership mapping.
+D020010,Customer identification and demographic profile storage,Weekly,Active,Customer demographic and personal profile ledger.
+D009081,System settings and application runtime parameters,Weekly,Active,System configuration parameters and batch scheduling tags.
+ATMMASTER,Physical terminal location and connectivity registry,Daily,Active,Physical terminal registry containing location and status information.
+D080204,End-of-day balance logging and interest computation,Daily,Active,Daily ledger balances and interest calculation snapshots.
+D030421,Cheque issue tracking and clearing status management,Daily,Active,Cheque leaf records and clearance status tracking.
+D071031,Loan repayment schedule and interest tracking,Daily,Active,Loan account interest schedule and installment mapping.

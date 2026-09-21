@@ -1,0 +1,58 @@
+Table Name : T080410
+Description : Investment Portfolio Master
+Domain : Wealth Management
+Subdomain/Codomain : Asset Management / Portfolio Holdings
+
+Table Name : T015022
+Description : Forex Exchange Rates
+Domain : Treasury & Global Markets
+Subdomain/Codomain : Currency Operations / Spot Rates
+
+Table Name : T003005
+Description : Audit Action Log
+Domain : System Administration & Security
+Subdomain/Codomain : Compliance & Security / User Access Audit
+
+Table Name : T041009
+Description : Merchant Settlement Register
+Domain : Payment & Clearing Operations
+Subdomain/Codomain : Merchant Services / Settlement Clearing
+
+Table Name : T022014
+Description : Credit Card Master
+Domain : Consumer Banking & Card Operations
+Subdomain/Codomain : Card Accounts / Limits & Balances
+
+Table Name : T005088
+Description : Corporate Entity Directory
+Domain : Customer Relationship Management
+Subdomain/Codomain : Commercial Entities / KYC Profiles
+
+================================================================================
+DATABASE SCHEMA - COLUMNS (ONLY USE THESE COLUMNS)
+================================================================================
+- T080410.PORTVAL (NUMBER) : Total portfolio valuation in base currency; calculated aggregate asset value
+- T080410.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- T015022.BASECURR (VARCHAR2) : Base currency code (ISO 4217, e.g., USD, EUR, INR)
+- T015022.TARGETCURR (VARCHAR2) : Target exchange currency identifier
+- T015022.EXRATE (NUMBER) : Spot conversion rate value applied at transaction timestamp
+- T003005.USERID (VARCHAR2) : Unique administrative user ID initiating system configuration change
+- T003005.SECACTION (VARCHAR2) : System security action code (e.g., PERM_GRANT, ROLE_REVOKE, PASS_RESET)
+- T003005.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- T041009.STTLAMT (NUMBER) : Net settled payment amount credited to merchant settlement ledger
+- T041009.STTLDATE (DATE) : Effective execution date for batch clearing cycle
+- T022014.CARDLIMIT (NUMBER) : Approved total credit limit allocated for primary cardholder
+- T022014.OUTSTNDBAL (NUMBER) : Current unbilled outstanding balance pending settlement
+- T022014.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- T005088.TAXIDNO (VARCHAR2) : Registered corporate entity tax identification number / registration index
+- T005088.NEEDS_INPUT (CHAR) : NEEDS YOUR INPUT - CHAR(1), blank in sample. Confirm if corporate entity is tax-exempt.
+- T005088.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+
+================================================================================
+INCOMING USER QUERIES (NL-TO-SQL PROMPT CONTEXT)
+================================================================================
+- USER_QUERY_01 : "Retrieve all active credit card records where the current outstanding balance exceeds 80 percent of the total card limit."
+- USER_QUERY_02 : "Fetch the spot exchange rates for USD to EUR transactions recorded after 2026-06-01."
+- USER_QUERY_03 : "List the total portfolio valuation for active wealth management accounts in the asset management subdomain."
+- USER_QUERY_04 : "Get all security audit logs associated with privilege grants and role revocations initiated by administrator accounts."
+- USER_QUERY_05 : "Find corporate entity profiles where the tax identification number is missing or unverified for tax exemption."

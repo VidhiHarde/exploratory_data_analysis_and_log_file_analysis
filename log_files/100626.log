@@ -1,0 +1,59 @@
+Table Name : D020118
+Description : TD Interest Table
+Domain : Interest Calculation
+Subdomain/Codomain : TD Interest Table
+
+Table Name : D011062
+Description : Checking Acct Params
+Domain : Product Master
+Subdomain/Codomain : Clearing / Checking Account Params
+
+Table Name : D002001
+Description : User Master
+Domain : User Management
+Subdomain/Codomain : User Master / Security
+
+Table Name : D030002
+Description : Loan Master Ledger
+Domain : Credit & Lending
+Subdomain/Codomain : Credit Line / Loan Accounts
+
+Table Name : D009021
+Description : Product Configuration Master
+Domain : Banking & Financial Services
+Subdomain/Codomain : Core Banking / Product Setup
+
+Table Name : D001003
+Description : Branch Customer Profile
+Domain : Customer Relationship Management
+Subdomain/Codomain : Customer Profiles / Legacy Identifiers
+
+================================================================================
+DATABASE SCHEMA - COLUMNS (ONLY USE THESE COLUMNS)
+================================================================================
+- D001118.SLABAMT (NUMBER) : Loans-against-balance / limit amount, principal face value into the Term Deposit
+- D001002.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted), Status of the record (Active, Inactive, Deleted, etc.).
+- D002001.ISACTIVE (NUMBER) : User active flag
+- D002001.MAXRPTFILES (NUMBER) : Maximum, Max bad password limit per application session instance before automatic lockout kicks in
+- D030002.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- D030003.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- D009043.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- D020002.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- D009022.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- D011062.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- D002001.DBTRRECSTAT (NUMBER) : Record status (active / inactive / deleted)
+- D030002.LINKINDEX (CHAR) : NEEDS YOUR INPUT - CHAR(2), blank in sample. What does the loan LINKINDEX link to?
+- D009021.IMPLDATE (DATE) : Date, the date this product configuration became active
+- D001003.TELEXNO1 (VARCHAR2) : Telephone number, Legacy Telex Lines; Retained for legacy compatibility layers; left blank in most modern entries
+- D030002.LOANAMT (NUMBER) : Principal balance allocated for active credit extensions; reflects baseline principal amount
+- D009021.PRODCODE (VARCHAR2) : Internal system product classification identifier mapped against global financial domain tables
+- D002001.LASTLOGIN (TIMESTAMP) : Timestamp tracking last recorded valid user session authentication event
+
+================================================================================
+INCOMING USER QUERIES (NL-TO-SQL PROMPT CONTEXT)
+================================================================================
+- USER_QUERY_01 : "Find all active users in User Master who have been locked out due to exceeding the maximum bad password limit."
+- USER_QUERY_02 : "List the term deposit interest slab amounts for active accounts where the principal balance exceeds $50,000."
+- USER_QUERY_03 : "Fetch the active product configuration codes along with their activation dates for all checking account parameters."
+- USER_QUERY_04 : "Retrieve the loan master entries created after 2026-01-01 along with their primary principal amounts and record status."
+- USER_QUERY_05 : "Get customer profiles that still contain legacy telex telephone numbers for branch reporting audit."
