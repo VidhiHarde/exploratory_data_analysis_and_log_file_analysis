@@ -1,5 +1,5 @@
-# # Enterprise Schema Exploration & Domain Identification
-# # Query Model Log Analysis and SQL Validation
+# Enterprise Schema Exploration & Domain Identification
+# Query Model Log Analysis and SQL Validation
 
 An end-to-end data engineering and analytical pipeline designed to profile enterprise database schemas, evaluate semantic domain overlap using vector embeddings, and automate audit processing for text-to-SQL execution logs.
 
