@@ -3,7 +3,7 @@
 
 An end-to-end data engineering and analytical pipeline designed to profile enterprise database schemas, evaluate semantic domain overlap using vector embeddings, and automate audit processing for text-to-SQL execution logs.
 
-## 📌 Project Overview
+## Project Overview
 
 ### Scope & Overview: 
 Conducted a structural and semantic analysis across 10 core target database tables.
